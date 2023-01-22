@@ -4,7 +4,7 @@
 
 #include "pfMain.h"
 
-#include <SDL3/SDL.h>
+#include <SDL2/SDL.h>
 
 // -- This is our main rendering window
 static SDL_Window* window = NULL;

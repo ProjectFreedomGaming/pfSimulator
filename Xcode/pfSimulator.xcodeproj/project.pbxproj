@@ -11,8 +11,8 @@
 		68232573297AE3700059359D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68232571297AE3700059359D /* MainMenu.xib */; };
 		68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68741B8E297AF416005838C1 /* AppDelegate.swift */; };
 		68741B97297B1424005838C1 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 68741B96297B1424005838C1 /* pfMain.c */; };
-		68741B98297B161B005838C1 /* SDL3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68741B91297AFA39005838C1 /* SDL3.framework */; };
-		68741B99297B161B005838C1 /* SDL3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68741B91297AFA39005838C1 /* SDL3.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; };
+		68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,7 +22,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				68741B99297B161B005838C1 /* SDL3.framework in Embed Frameworks */,
+				68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +41,8 @@
 		6823258E297AF1850059359D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		68741B8E297AF416005838C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68741B90297AF622005838C1 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTORS.md; path = ../CONTRIBUTORS.md; sourceTree = "<group>"; };
-		68741B91297AFA39005838C1 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = ../../../vendor/macOS/Debug/SDL3.framework; sourceTree = "<group>"; };
 		68741B96297B1424005838C1 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
+		68BBB719297C0E90003AF229 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../vendor/macOS/Debug/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68741B98297B161B005838C1 /* SDL3.framework in Frameworks */,
+				68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 		68232588297AF1480059359D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				68741B91297AFA39005838C1 /* SDL3.framework */,
+				68BBB719297C0E90003AF229 /* SDL2.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
