@@ -13,6 +13,7 @@
 		68741B97297B1424005838C1 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 68741B96297B1424005838C1 /* pfMain.c */; };
 		68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */; };
 		68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF8297EA0580067DAF5 /* pfMemory.c */; };
+		68A26BFE297EBE230067DAF5 /* pfVSync.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BFC297EBE230067DAF5 /* pfVSync.c */; };
 		68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; };
 		68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -49,6 +50,8 @@
 		68A26BF8297EA0580067DAF5 /* pfMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMemory.c; sourceTree = "<group>"; };
 		68A26BF9297EA0580067DAF5 /* pfMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMemory.h; sourceTree = "<group>"; };
 		68A26BFB297EA4A30067DAF5 /* pfTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfTypes.h; sourceTree = "<group>"; };
+		68A26BFC297EBE230067DAF5 /* pfVSync.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfVSync.c; sourceTree = "<group>"; };
+		68A26BFD297EBE230067DAF5 /* pfVSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfVSync.h; sourceTree = "<group>"; };
 		68BBB719297C0E90003AF229 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../vendor/macOS/Debug/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +118,8 @@
 				68A26BF6297E9F3A0067DAF5 /* pfSimulator.h */,
 				68A26BF8297EA0580067DAF5 /* pfMemory.c */,
 				68A26BF9297EA0580067DAF5 /* pfMemory.h */,
+				68A26BFC297EBE230067DAF5 /* pfVSync.c */,
+				68A26BFD297EBE230067DAF5 /* pfVSync.h */,
 				68A26BFB297EA4A30067DAF5 /* pfTypes.h */,
 			);
 			name = src;
@@ -194,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */,
+				68A26BFE297EBE230067DAF5 /* pfVSync.c in Sources */,
 				68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */,
 				68741B97297B1424005838C1 /* pfMain.c in Sources */,
 				68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */,
