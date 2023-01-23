@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "pfSimulator.h"
+#include "pfCpu.h"
 #include "pfVSync.h"
 #include "pfMemory.h"
 
@@ -21,6 +22,9 @@ typedef struct PFSimulator
     // -- Renderer that is attached to the window
     SDL_Renderer* renderer;
     
+    // -- CPU that runs the game code
+    PFCpu *cpu;
+
 } PFSimulator;
 
 // -- Functions
@@ -60,7 +64,10 @@ PFSimulatorUpdateStatus pfSimulatorUpdate(void)
 
 PFSimulator* pfSimulatorNew(void)
 {
-    PFSimulator* this = pfMemoryAlloc(sizeof(PFSimulator));
+    PFSimulator* this = pfMemoryCalloc(sizeof(PFSimulator));
+    if (this == NULL) {
+        return NULL;
+    }
 
     // -- Create the simulator's main window
     this->window = SDL_CreateWindow("pfSimulator",
@@ -80,11 +87,22 @@ PFSimulator* pfSimulatorNew(void)
         return NULL;
     }
 
+    this->cpu = pfCpuNew(this);
+    if (this->cpu == NULL) {
+        pfSimulatorDelete(this);
+        return NULL;
+    }
+
     return this;
 }
 
 void pfSimulatorDelete(PFSimulator* this)
 {
+    if (this->cpu != NULL) {
+        pfCpuDelete(this->cpu);
+        this->cpu = NULL;
+    }
+    
     if (this->renderer != NULL) {
         SDL_DestroyRenderer(this->renderer);
         this->renderer = NULL;
