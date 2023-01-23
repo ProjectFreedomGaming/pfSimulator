@@ -15,7 +15,7 @@
 // -- Types
 typedef struct PFSimulator
 {
-    // -- This is our main rendering window
+    // -- Main rendering window
     SDL_Window* window;
 
     // -- Renderer that is attached to the window
