@@ -2,5 +2,8 @@
 //
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+// -- Setup up the simulator app
 void pfMain(void);
+
+// -- Clean up our mess before exiting
 void pfTerminate(void);

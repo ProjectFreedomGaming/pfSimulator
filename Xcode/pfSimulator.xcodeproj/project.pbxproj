@@ -11,6 +11,8 @@
 		68232573297AE3700059359D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68232571297AE3700059359D /* MainMenu.xib */; };
 		68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68741B8E297AF416005838C1 /* AppDelegate.swift */; };
 		68741B97297B1424005838C1 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 68741B96297B1424005838C1 /* pfMain.c */; };
+		68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */; };
+		68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF8297EA0580067DAF5 /* pfMemory.c */; };
 		68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; };
 		68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -42,6 +44,11 @@
 		68741B8E297AF416005838C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68741B90297AF622005838C1 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTORS.md; path = ../CONTRIBUTORS.md; sourceTree = "<group>"; };
 		68741B96297B1424005838C1 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
+		68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfSimulator.c; sourceTree = "<group>"; };
+		68A26BF6297E9F3A0067DAF5 /* pfSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfSimulator.h; sourceTree = "<group>"; };
+		68A26BF8297EA0580067DAF5 /* pfMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMemory.c; sourceTree = "<group>"; };
+		68A26BF9297EA0580067DAF5 /* pfMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMemory.h; sourceTree = "<group>"; };
+		68A26BFB297EA4A30067DAF5 /* pfTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfTypes.h; sourceTree = "<group>"; };
 		68BBB719297C0E90003AF229 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../vendor/macOS/Debug/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +111,11 @@
 			children = (
 				6800EB6A297BF4D20054D164 /* pfMain.h */,
 				68741B96297B1424005838C1 /* pfMain.c */,
+				68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */,
+				68A26BF6297E9F3A0067DAF5 /* pfSimulator.h */,
+				68A26BF8297EA0580067DAF5 /* pfMemory.c */,
+				68A26BF9297EA0580067DAF5 /* pfMemory.h */,
+				68A26BFB297EA4A30067DAF5 /* pfTypes.h */,
 			);
 			name = src;
 			path = ../../src;
@@ -181,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */,
+				68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */,
 				68741B97297B1424005838C1 /* pfMain.c in Sources */,
 				68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */,
 			);

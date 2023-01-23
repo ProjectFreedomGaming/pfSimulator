@@ -3,31 +3,22 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "pfMain.h"
+#include "pfSimulator.h"
 
-#include <SDL2/SDL.h>
+// -- This is our main simulator instance
+static PFSimulator* simulator = NULL;
 
-// -- This is our main rendering window
-static SDL_Window* window = NULL;
-
-// -- Setup up the simulator
+// -- Setup up the simulator app
 void pfMain(void)
 {
-    // -- Init the SDL subsystem
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-        printf("error initializing SDL: %s\n", SDL_GetError());
-    }
-    
-    // -- Create our main window
-    window = SDL_CreateWindow("pfSimulator",
-                              SDL_WINDOWPOS_CENTERED,
-                              SDL_WINDOWPOS_CENTERED,
-                              800, 480, 0);
+    pfSimulatorInit();
 
-    // -- The do nothing until the app quits
+    // -- Create our main window
+    simulator = pfSimulatorNew();
+
+    // -- Then do nothing until the app quits
     while (1) {
-        SDL_Event event;
-        SDL_WaitEvent(&event);
-        if (event.type == SDL_QUIT) {
+        if (pfSimulatorUpdate() == kMustQuit) {
             return;
         }
     }
@@ -36,10 +27,10 @@ void pfMain(void)
 // -- Clean up our mess before exiting
 void pfTerminate(void)
 {
-    if (window != NULL) {
-        SDL_DestroyWindow(window);
-        window = NULL;
+    if (simulator != NULL) {
+        pfSimulatorDelete(simulator);
+        simulator = NULL;
     }
-    
-    SDL_Quit();
+
+    pfSimulatorShutdown();
 }
