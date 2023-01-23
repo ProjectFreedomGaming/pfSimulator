@@ -10,6 +10,9 @@
 // -- Memory size type
 typedef size_t size;
 
+// -- Byte size type
+typedef uint8_t byte;
+
 // -- Boolean type
 typedef int bool;
 
