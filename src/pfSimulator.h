@@ -2,6 +2,9 @@
 //
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+#ifndef PF_SIMULATOR_H
+#define PF_SIMULATOR_H
+
 #include "pfTypes.h"
 
 // -- Simulator C type
@@ -24,3 +27,5 @@ PFSimulator* pfSimulatorNew(void);
 
 // -- Destroy an existing simulator
 void pfSimulatorDelete(PFSimulator*);
+
+#endif
