@@ -6,7 +6,7 @@
 #include "pfSimulator.h"
 
 // -- This is our main simulator instance
-static PFSimulator* simulator = NULL;
+static PFSimulator* _simulator = NULL;
 
 // -- Setup up the simulator app
 void pfMain(void)
@@ -14,7 +14,7 @@ void pfMain(void)
     pfSimulatorInit();
 
     // -- Create our main window
-    simulator = pfSimulatorNew();
+    _simulator = pfSimulatorNew();
 
     // -- Then do nothing until the app quits
     while (1) {
@@ -27,9 +27,9 @@ void pfMain(void)
 // -- Clean up our mess before exiting
 void pfTerminate(void)
 {
-    if (simulator != NULL) {
-        pfSimulatorDelete(simulator);
-        simulator = NULL;
+    if (_simulator != NULL) {
+        pfSimulatorDelete(_simulator);
+        _simulator = NULL;
     }
 
     pfSimulatorShutdown();
