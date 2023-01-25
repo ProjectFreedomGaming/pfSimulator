@@ -130,11 +130,6 @@ void pfSimulatorDelete(PFSimulator* this)
     pfMemoryFree(this);
 }
 
-void pfSimulatorVSyncWait(void)
-{
-    pfVSyncWait();
-}
-
 size pfSimulatorGetVSyncCount(void)
 {
     return pfGetVSyncCount();

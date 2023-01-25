@@ -31,9 +31,6 @@ void pfSimulatorDelete(PFSimulator*);
 // -- Get the current VSync count
 size pfSimulatorGetVSyncCount(void);
 
-// -- Wait for the next VSync
-void pfSimulatorVSyncWait(void);
-
 // -- Debug function to set the background color to something
 void pfSimulatorClearDisplay(PFSimulator* this, byte r, byte g, byte b);
 
