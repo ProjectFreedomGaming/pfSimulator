@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681B830F297FD2AE0014709E /* pfRegister.c in Sources */ = {isa = PBXBuildFile; fileRef = 681B830E297FD2AE0014709E /* pfRegister.c */; };
 		68232570297AE3700059359D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6823256F297AE3700059359D /* Assets.xcassets */; };
 		68232573297AE3700059359D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68232571297AE3700059359D /* MainMenu.xib */; };
 		68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68741B8E297AF416005838C1 /* AppDelegate.swift */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		6800EB6A297BF4D20054D164 /* pfMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfMain.h; sourceTree = "<group>"; };
+		681B830D297FD2AE0014709E /* pfRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfRegister.h; sourceTree = "<group>"; };
+		681B830E297FD2AE0014709E /* pfRegister.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfRegister.c; sourceTree = "<group>"; };
 		6823256A297AE36F0059359D /* pfSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pfSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6823256F297AE3700059359D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68232572297AE3700059359D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				68A26BFD297EBE230067DAF5 /* pfVSync.h */,
 				68A26C00297EC7610067DAF5 /* pfCpu.c */,
 				68A26BFF297EC7610067DAF5 /* pfCpu.h */,
+				681B830E297FD2AE0014709E /* pfRegister.c */,
+				681B830D297FD2AE0014709E /* pfRegister.h */,
 				683FB3DA297F2E4400F90430 /* pfAssert.h */,
 				68A26BFB297EA4A30067DAF5 /* pfTypes.h */,
 			);
@@ -207,6 +212,7 @@
 			files = (
 				68A26C01297EC7610067DAF5 /* pfCpu.c in Sources */,
 				68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */,
+				681B830F297FD2AE0014709E /* pfRegister.c in Sources */,
 				68A26BFE297EBE230067DAF5 /* pfVSync.c in Sources */,
 				68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */,
 				68741B97297B1424005838C1 /* pfMain.c in Sources */,
