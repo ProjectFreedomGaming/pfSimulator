@@ -4,6 +4,8 @@
 
 #include "pfSimulator.h"
 #include "pfCpu.h"
+#include "pfMmu.h"
+#include "pfPfx1.h"
 #include "pfVSync.h"
 #include "pfAssert.h"
 #include "pfMemory.h"
@@ -25,6 +27,12 @@ typedef struct PFSimulator
     
     // -- CPU that runs the game code
     PFCpu *cpu;
+
+    // -- Memory management unit
+    PFMmu* mmu;
+
+    // -- Graphics chip that does the dirty work
+    PFPfx1* gfx;
 
 } PFSimulator;
 
@@ -79,9 +87,14 @@ PFSimulator* pfSimulatorNew(void)
     
     this->renderer = SDL_CreateRenderer(this->window, -1, 0);
     PF_ASSERT(this->renderer != NULL);
+    
+    this->mmu = pfMmuNew();
+    PF_ASSERT(this->mmu != NULL);
 
-    this->cpu = pfCpuNew(this);
+    this->gfx = pfPfx1New(this, this->mmu);
+    PF_ASSERT(this->gfx != NULL);
 
+    this->cpu = pfCpuNew(this->mmu);
     PF_ASSERT(this->cpu != NULL);
     
     return this;
@@ -89,9 +102,9 @@ PFSimulator* pfSimulatorNew(void)
 
 void pfSimulatorDelete(PFSimulator* this)
 {
-    if (this->cpu != NULL) {
-        pfCpuDelete(this->cpu);
-        this->cpu = NULL;
+    if (this->window != NULL) {
+        SDL_DestroyWindow(this->window);
+        this->window = NULL;
     }
     
     if (this->renderer != NULL) {
@@ -99,9 +112,19 @@ void pfSimulatorDelete(PFSimulator* this)
         this->renderer = NULL;
     }
     
-    if (this->window != NULL) {
-        SDL_DestroyWindow(this->window);
-        this->window = NULL;
+    if (this->cpu != NULL) {
+        pfCpuDelete(this->cpu);
+        this->cpu = NULL;
+    }
+    
+    if (this->gfx != NULL) {
+        pfPfx1Delete(this->gfx);
+        this->gfx = NULL;
+    }
+    
+    if (this->mmu != NULL) {
+        pfMmuDelete(this->mmu);
+        this->mmu = NULL;
     }
     
     pfMemoryFree(this);

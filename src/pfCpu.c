@@ -3,9 +3,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "pfCpu.h"
-#include "pfSimulator.h"
+#include "pfPfx1Registers.h"
 #include "pfMemory.h"
 #include "pfTypes.h"
+#include "pfAssert.h"
 
 #include <SDL2/SDL.h>
 
@@ -13,8 +14,9 @@
 typedef struct PFCpu
 {
     SDL_Thread* thread;
-
-    PFSimulator* simulator;
+    bool thread_should_exit;
+    
+    PFMmu* mmu;
 } PFCpu;
 
 // -- Functions
@@ -26,51 +28,56 @@ static int _threadFunction(void* data)
     byte g = 0;
     byte b = 0;
 
-    while (1) {
-        pfSimulatorClearDisplay(this->simulator, r, g, b);
-        
+    while (!this->thread_should_exit) {
+        pfMmuWrite(this->mmu, PF_PFX1_BASE + PF_PFX1_COLOR_RG, (r << 8) | g);
+        pfMmuWrite(this->mmu, PF_PFX1_BASE + PF_PFX1_COLOR_BA, (b << 8) | 255);
+        pfMmuWrite(this->mmu, PF_PFX1_BASE + PF_PFX1_CONTROL, PF_PFX1_CONTROL_CLEAR_SCREEN);
+
         r += 12;
         g += 4;
         b += 34;
 
-        pfSimulatorVSyncWait();
+        uint16 previous_vsync = pfMmuRead(this->mmu, PF_PFX1_BASE + PF_PFX1_VSYNC_COUNT);
+        while (pfMmuRead(this->mmu, PF_PFX1_BASE + PF_PFX1_VSYNC_COUNT) == previous_vsync) {
+            if (this->thread_should_exit) {
+                return 0;
+            }
 
-        pfSimulatorSwapDisplayBuffer(this->simulator);
+            SDL_Delay(1);
+        }
+
+        pfMmuWrite(this->mmu, PF_PFX1_BASE + PF_PFX1_CONTROL, PF_PFX1_CONTROL_SWAP_BUFFER);
     }
     
     return 0;
 }
 
-PFCpu* pfCpuNew(PFSimulator* simulator)
+PFCpu* pfCpuNew(PFMmu* mmu)
 {
-    if (simulator == NULL) {
-        return NULL;
-    }
-    
+    PF_ASSERT_DEBUG(mmu != NULL);
+
     PFCpu* this = pfMemoryCalloc(sizeof(PFCpu));
-    if (this == NULL) {
-        return NULL;
-    }
-    
+    PF_ASSERT(this != NULL);
+
     this->thread = SDL_CreateThread(_threadFunction, "pfCpu", this);
-    if (this->thread == NULL) {
-        pfCpuDelete(this);
-        return NULL;
-    }
-
-    this->simulator = simulator;
-
+    PF_ASSERT(this->thread != NULL);
+    
+    this->mmu = mmu;
+    
     return this;
 }
 
 void pfCpuDelete(PFCpu* this)
 {
-    if (this->thread  != NULL) {
-        SDL_DetachThread(this->thread);
+    if (this->thread != NULL) {
+        this->thread_should_exit = TRUE;
+        
+        SDL_WaitThread(this->thread, NULL);
+
         this->thread = NULL;
     }
-    
-    this->simulator = NULL;
+
+    this->mmu = NULL;
 
     pfMemoryFree(this);
 }
