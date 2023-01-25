@@ -38,6 +38,6 @@ void pfSimulatorVSyncWait(void);
 void pfSimulatorClearDisplay(PFSimulator* this, byte r, byte g, byte b);
 
 // -- Swap the drawing and display buffers
-void pfSimulatorSwapDisplayBuffer(PFSimulator*);
+void pfSimulatorSwapDisplayBuffer(PFSimulator* this);
 
 #endif

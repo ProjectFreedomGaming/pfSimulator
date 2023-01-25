@@ -15,6 +15,6 @@ typedef struct PFCpu PFCpu;
 PFCpu* pfCpuNew(PFSimulator*);
 
 // -- Destroy an existing CPU
-void pfCpuDelete(PFCpu*);
+void pfCpuDelete(PFCpu* this);
 
 #endif
