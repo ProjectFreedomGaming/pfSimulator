@@ -43,6 +43,7 @@
 		6823258C297AF1760059359D /* Acknowledgement.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Acknowledgement.md; path = ../vendor/Acknowledgement.md; sourceTree = "<group>"; };
 		6823258D297AF1850059359D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6823258E297AF1850059359D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		683FB3DA297F2E4400F90430 /* pfAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfAssert.h; sourceTree = "<group>"; };
 		68741B8E297AF416005838C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68741B90297AF622005838C1 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTORS.md; path = ../CONTRIBUTORS.md; sourceTree = "<group>"; };
 		68741B96297B1424005838C1 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 				68A26BFD297EBE230067DAF5 /* pfVSync.h */,
 				68A26C00297EC7610067DAF5 /* pfCpu.c */,
 				68A26BFF297EC7610067DAF5 /* pfCpu.h */,
+				683FB3DA297F2E4400F90430 /* pfAssert.h */,
 				68A26BFB297EA4A30067DAF5 /* pfTypes.h */,
 			);
 			name = src;
