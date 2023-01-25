@@ -13,6 +13,13 @@ typedef size_t size;
 // -- Byte size type
 typedef uint8_t byte;
 
+// -- Various integer types
+typedef uint16_t uint16;
+typedef uint32_t uint32;
+
+// -- Pointer type
+typedef uint32_t pointer;
+
 // -- Boolean type
 typedef int bool;
 
