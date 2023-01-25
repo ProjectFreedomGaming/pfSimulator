@@ -11,11 +11,12 @@
 // -- Static variables
 static SDL_Thread* _thread = NULL;
 static size _vsync_count = 0;
+static bool _thread_should_exit = FALSE;
 
 // -- Functions
 static int _threadFunction(void* data)
 {
-    while (1) {
+    while (!_thread_should_exit) {
         // -- We generate one VSync every 1/50 of a second (Old school PAL for the win :)
         SDL_Delay(1000 / 50);
 
@@ -38,7 +39,10 @@ void pfVsyncInit(void)
 void pfVsyncShutdown(void)
 {
     if (_thread != NULL) {
-        SDL_DetachThread(_thread);
+        _thread_should_exit = TRUE;
+
+        SDL_WaitThread(_thread, NULL);
+
         _thread = NULL;
     }
 }
