@@ -5,6 +5,7 @@
 #include "pfSimulator.h"
 #include "pfCpu.h"
 #include "pfVSync.h"
+#include "pfAssert.h"
 #include "pfMemory.h"
 
 #include <SDL2/SDL.h>
@@ -65,9 +66,7 @@ PFSimulatorUpdateStatus pfSimulatorUpdate(void)
 PFSimulator* pfSimulatorNew(void)
 {
     PFSimulator* this = pfMemoryCalloc(sizeof(PFSimulator));
-    if (this == NULL) {
-        return NULL;
-    }
+    PF_ASSERT(this != NULL);
 
     // -- Create the simulator's main window
     this->window = SDL_CreateWindow("pfSimulator",
@@ -76,23 +75,15 @@ PFSimulator* pfSimulatorNew(void)
                                     PF_SIMULATOR_SCREEN_SIZE_X,
                                     PF_SIMULATOR_SCREEN_SIZE_Y,
                                     0);
-    if (this->window == NULL) {
-        pfSimulatorDelete(this);
-        return NULL;
-    }
+    PF_ASSERT(this->window != NULL);
     
     this->renderer = SDL_CreateRenderer(this->window, -1, 0);
-    if (this->renderer == NULL) {
-        pfSimulatorDelete(this);
-        return NULL;
-    }
+    PF_ASSERT(this->renderer != NULL);
 
     this->cpu = pfCpuNew(this);
-    if (this->cpu == NULL) {
-        pfSimulatorDelete(this);
-        return NULL;
-    }
 
+    PF_ASSERT(this->cpu != NULL);
+    
     return this;
 }
 
@@ -128,19 +119,11 @@ size pfSimulatorGetVSyncCount(void)
 
 void pfSimulatorClearDisplay(PFSimulator* this, byte r, byte g, byte b)
 {
-    if (this->renderer == NULL) {
-        return;
-    }
-
     SDL_SetRenderDrawColor(this->renderer, r, g, b, 255);
     SDL_RenderClear(this->renderer);
 }
 
 void pfSimulatorSwapDisplayBuffer(PFSimulator* this)
 {
-    if (this->renderer == NULL) {
-        return;
-    }
-
     SDL_RenderPresent(this->renderer);
 }

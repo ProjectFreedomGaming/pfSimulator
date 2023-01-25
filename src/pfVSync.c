@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "pfVSync.h"
+#include "pfAssert.h"
 #include "pfTypes.h"
 
 #include <SDL2/SDL.h>
@@ -31,6 +32,7 @@ void pfVsyncInit(void)
     }
     
     _thread = SDL_CreateThread(_threadFunction, "pfVSync", NULL);
+    PF_ASSERT(_thread != NULL);
 }
 
 void pfVsyncShutdown(void)
