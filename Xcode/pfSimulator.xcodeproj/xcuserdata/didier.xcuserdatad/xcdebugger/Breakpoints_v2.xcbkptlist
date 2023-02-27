@@ -3,4 +3,198 @@
    uuid = "46EC0F4A-E2DB-4389-BC74-3C96A7503FDA"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAE71D6F-24C0-4842-A7D2-A5B13EEDEF84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "m68k_read_memory_8(address)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "FAE71D6F-24C0-4842-A7D2-A5B13EEDEF84 - 8f585a8bf55007b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_read_memory_8"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "FAE71D6F-24C0-4842-A7D2-A5B13EEDEF84 - 8f585a8bf55007b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_read_memory_8"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "704FF4E6-AE8C-4487-9B9D-55A640FC3562"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "m68k_read_memory_16(address)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "704FF4E6-AE8C-4487-9B9D-55A640FC3562 - f2d9afe3bab2354a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_read_memory_16"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "704FF4E6-AE8C-4487-9B9D-55A640FC3562 - f2d9afe3bab2354a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_read_memory_16"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24B73CC2-B1F1-4635-8B55-445A5B158F72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "m68k_read_memory_32(address)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57C711C2-E547-4A63-BF4E-938B52F37BDE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "m68k_write_memory_8(address, value)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "57C711C2-E547-4A63-BF4E-938B52F37BDE - 4bb526473865e488"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_write_memory_8"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "57C711C2-E547-4A63-BF4E-938B52F37BDE - 4bb526473865e488"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "m68k_write_memory_8"
+                  moduleName = "pfSimulator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/didier/Documents/Code/ProjectFreedom/pfSimulator/src/pfCpu.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2958DABB-0D93-410C-B91D-2049B3243CD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "m68k_write_memory_32(address, value)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E16A9AD5-D938-4224-BFBF-C346B45826D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../src/pfCpu.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "m68k_write_memory_16(address, value)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

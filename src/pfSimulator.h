@@ -23,7 +23,7 @@ void pfSimulatorShutdown(void);
 PFSimulatorUpdateStatus pfSimulatorUpdate(void);
 
 // -- Create a new simulator
-PFSimulator* pfSimulatorNew(void);
+PFSimulator* pfSimulatorNew(const char* rom_file_path);
 
 // -- Destroy an existing simulator
 void pfSimulatorDelete(PFSimulator*);

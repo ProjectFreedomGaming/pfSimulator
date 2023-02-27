@@ -6,7 +6,7 @@
 #define PF_MAIN_H
 
 // -- Setup up the simulator app
-void pfMain(void);
+void pfMain(int argc, char* argv[]);
 
 // -- Clean up our mess before exiting
 void pfTerminate(void);

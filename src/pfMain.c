@@ -9,12 +9,19 @@
 static PFSimulator* _simulator = NULL;
 
 // -- Setup up the simulator app
-void pfMain(void)
+void pfMain(int argc, char* argv[])
 {
+    if (argc < 1) {
+        return;
+    }
+
     pfSimulatorInit();
 
     // -- Create our main window
-    _simulator = pfSimulatorNew();
+    _simulator = pfSimulatorNew(argv[0]);
+    if (_simulator == NULL) {
+        return;
+    }
 
     // -- Then do nothing until the app quits
     while (1) {

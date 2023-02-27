@@ -7,20 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		681B830F297FD2AE0014709E /* pfRegister.c in Sources */ = {isa = PBXBuildFile; fileRef = 681B830E297FD2AE0014709E /* pfRegister.c */; };
+		6812000D29A6A5BE00F11877 /* pfMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812FFFB29A6A5BE00F11877 /* pfMemory.c */; };
+		6812000E29A6A5BE00F11877 /* pfRam.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812FFFF29A6A5BE00F11877 /* pfRam.c */; };
+		6812000F29A6A5BE00F11877 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000029A6A5BE00F11877 /* pfMain.c */; };
+		6812001029A6A5BE00F11877 /* pfPfx1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000329A6A5BE00F11877 /* pfPfx1.c */; };
+		6812001129A6A5BE00F11877 /* pfSimulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000529A6A5BE00F11877 /* pfSimulator.c */; };
+		6812001229A6A5BE00F11877 /* pfCpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000629A6A5BE00F11877 /* pfCpu.c */; };
+		6812001329A6A5BE00F11877 /* pfVSync.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000729A6A5BE00F11877 /* pfVSync.c */; };
+		6812001429A6A5BE00F11877 /* pfRegister.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000829A6A5BE00F11877 /* pfRegister.c */; };
+		6812001529A6A5BE00F11877 /* pfIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000A29A6A5BE00F11877 /* pfIO.c */; };
+		6812004729A6A5E600F11877 /* softfloat.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812001A29A6A5E600F11877 /* softfloat.c */; };
+		6812004B29A6A5E600F11877 /* m68kcpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812002129A6A5E600F11877 /* m68kcpu.c */; };
+		6812004C29A6A5E600F11877 /* m68kdasm.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812002229A6A5E600F11877 /* m68kdasm.c */; };
+		6812005D29A6A5E600F11877 /* m68kops.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812003E29A6A5E600F11877 /* m68kops.c */; };
 		68232570297AE3700059359D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6823256F297AE3700059359D /* Assets.xcassets */; };
 		68232573297AE3700059359D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68232571297AE3700059359D /* MainMenu.xib */; };
-		683FB3D9297F275600F90430 /* pfMmu.c in Sources */ = {isa = PBXBuildFile; fileRef = 683FB3D8297F275600F90430 /* pfMmu.c */; };
+		6858FD31299FBA0000FF68E3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6858FD2F299FB98C00FF68E3 /* SDL2.framework */; };
+		6858FD32299FBA0000FF68E3 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6858FD2F299FB98C00FF68E3 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68741B8E297AF416005838C1 /* AppDelegate.swift */; };
-		68741B97297B1424005838C1 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 68741B96297B1424005838C1 /* pfMain.c */; };
-		68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */; };
-		68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BF8297EA0580067DAF5 /* pfMemory.c */; };
-		68A26BFE297EBE230067DAF5 /* pfVSync.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26BFC297EBE230067DAF5 /* pfVSync.c */; };
-		68A26C01297EC7610067DAF5 /* pfCpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26C00297EC7610067DAF5 /* pfCpu.c */; };
-		68A26C04297ED3CB0067DAF5 /* pfPfx1.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A26C02297ED3CB0067DAF5 /* pfPfx1.c */; };
-		68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; };
-		68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68BBB719297C0E90003AF229 /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6800CE5F29ACAB9500DEB8D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68232562297AE36F0059359D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6800CE5B29ACAB2800DEB8D6;
+			remoteInfo = Musashi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		68232582297AE8180059359D /* Embed Frameworks */ = {
@@ -29,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				68BBB71C297C0EAF003AF229 /* SDL2.framework in Embed Frameworks */,
+				6858FD32299FBA0000FF68E3 /* SDL2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,36 +52,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6800EB6A297BF4D20054D164 /* pfMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfMain.h; sourceTree = "<group>"; };
-		681B830C297FD2500014709E /* pfPfx1Registers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfPfx1Registers.h; sourceTree = "<group>"; };
-		681B830D297FD2AE0014709E /* pfRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfRegister.h; sourceTree = "<group>"; };
-		681B830E297FD2AE0014709E /* pfRegister.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfRegister.c; sourceTree = "<group>"; };
+		6800CE6229ACB50B00DEB8D6 /* Coding Standards.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Coding Standards.md"; sourceTree = "<group>"; };
+		6800CE6329ACB50B00DEB8D6 /* Building The Simulator.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Building The Simulator.md"; sourceTree = "<group>"; };
+		6812000029A6A5BE00F11877 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
+		6812000129A6A5BE00F11877 /* pfIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfIO.h; sourceTree = "<group>"; };
+		6812000229A6A5BE00F11877 /* pfRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfRegister.h; sourceTree = "<group>"; };
+		6812000329A6A5BE00F11877 /* pfPfx1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfPfx1.c; sourceTree = "<group>"; };
+		6812000429A6A5BE00F11877 /* pfMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMemory.h; sourceTree = "<group>"; };
+		6812000529A6A5BE00F11877 /* pfSimulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfSimulator.c; sourceTree = "<group>"; };
+		6812000629A6A5BE00F11877 /* pfCpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfCpu.c; sourceTree = "<group>"; };
+		6812000729A6A5BE00F11877 /* pfVSync.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfVSync.c; sourceTree = "<group>"; };
+		6812000829A6A5BE00F11877 /* pfRegister.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfRegister.c; sourceTree = "<group>"; };
+		6812000929A6A5BE00F11877 /* pfAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfAssert.h; sourceTree = "<group>"; };
+		6812000A29A6A5BE00F11877 /* pfIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfIO.c; sourceTree = "<group>"; };
+		6812000B29A6A5BE00F11877 /* pfRam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfRam.h; sourceTree = "<group>"; };
+		6812000C29A6A5BE00F11877 /* pfMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMain.h; sourceTree = "<group>"; };
+		6812001729A6A5E600F11877 /* m68kfpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68kfpu.c; sourceTree = "<group>"; };
+		6812001929A6A5E600F11877 /* mamesf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mamesf.h; sourceTree = "<group>"; };
+		6812001A29A6A5E600F11877 /* softfloat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = softfloat.c; sourceTree = "<group>"; };
+		6812001B29A6A5E600F11877 /* softfloat-macros */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "softfloat-macros"; sourceTree = "<group>"; };
+		6812001C29A6A5E600F11877 /* milieu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = milieu.h; sourceTree = "<group>"; };
+		6812001E29A6A5E600F11877 /* softfloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = softfloat.h; sourceTree = "<group>"; };
+		6812001F29A6A5E600F11877 /* softfloat-specialize */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "softfloat-specialize"; sourceTree = "<group>"; };
+		6812002029A6A5E600F11877 /* m68k.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68k.h; sourceTree = "<group>"; };
+		6812002129A6A5E600F11877 /* m68kcpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68kcpu.c; sourceTree = "<group>"; };
+		6812002229A6A5E600F11877 /* m68kdasm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68kdasm.c; sourceTree = "<group>"; };
+		6812002329A6A5E600F11877 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		6812003E29A6A5E600F11877 /* m68kops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68kops.c; sourceTree = "<group>"; };
+		6812003F29A6A5E600F11877 /* m68kmmu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68kmmu.h; sourceTree = "<group>"; };
+		6812004029A6A5E600F11877 /* m68kmake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68kmake.c; sourceTree = "<group>"; };
+		6812004129A6A5E600F11877 /* m68kcpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68kcpu.h; sourceTree = "<group>"; };
+		6812004229A6A5E600F11877 /* m68kconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68kconf.h; sourceTree = "<group>"; };
+		6812004429A6A5E600F11877 /* m68kops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68kops.h; sourceTree = "<group>"; };
+		6812004529A6A5E600F11877 /* m68k_in.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68k_in.c; sourceTree = "<group>"; };
+		6812FFF929A6A5BE00F11877 /* pfTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfTypes.h; sourceTree = "<group>"; };
+		6812FFFA29A6A5BE00F11877 /* pfPfx1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfPfx1.h; sourceTree = "<group>"; };
+		6812FFFB29A6A5BE00F11877 /* pfMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMemory.c; sourceTree = "<group>"; };
+		6812FFFC29A6A5BE00F11877 /* pfSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfSimulator.h; sourceTree = "<group>"; };
+		6812FFFD29A6A5BE00F11877 /* pfVSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfVSync.h; sourceTree = "<group>"; };
+		6812FFFE29A6A5BE00F11877 /* pfCpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfCpu.h; sourceTree = "<group>"; };
+		6812FFFF29A6A5BE00F11877 /* pfRam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfRam.c; sourceTree = "<group>"; };
 		6823256A297AE36F0059359D /* pfSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pfSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6823256F297AE3700059359D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68232572297AE3700059359D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		68232574297AE3700059359D /* pfSimulator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = pfSimulator.entitlements; sourceTree = "<group>"; };
 		6823257C297AE48E0059359D /* pfSimulator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pfSimulator-Bridging-Header.h"; sourceTree = "<group>"; };
-		6823258C297AF1760059359D /* Acknowledgement.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Acknowledgement.md; path = ../vendor/Acknowledgement.md; sourceTree = "<group>"; };
 		6823258D297AF1850059359D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6823258E297AF1850059359D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		683FB3D7297F275600F90430 /* pfMmu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMmu.h; sourceTree = "<group>"; };
-		683FB3D8297F275600F90430 /* pfMmu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMmu.c; sourceTree = "<group>"; };
-		683FB3DA297F2E4400F90430 /* pfAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfAssert.h; sourceTree = "<group>"; };
+		6858FD2D299F841A00FF68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6858FD2F299FB98C00FF68E3 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../vendor/macOS/Debug/SDL2.framework; sourceTree = SOURCE_ROOT; };
 		68741B8E297AF416005838C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68741B90297AF622005838C1 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTORS.md; path = ../CONTRIBUTORS.md; sourceTree = "<group>"; };
-		68741B96297B1424005838C1 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
-		68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfSimulator.c; sourceTree = "<group>"; };
-		68A26BF6297E9F3A0067DAF5 /* pfSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfSimulator.h; sourceTree = "<group>"; };
-		68A26BF8297EA0580067DAF5 /* pfMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMemory.c; sourceTree = "<group>"; };
-		68A26BF9297EA0580067DAF5 /* pfMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMemory.h; sourceTree = "<group>"; };
-		68A26BFB297EA4A30067DAF5 /* pfTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pfTypes.h; sourceTree = "<group>"; };
-		68A26BFC297EBE230067DAF5 /* pfVSync.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfVSync.c; sourceTree = "<group>"; };
-		68A26BFD297EBE230067DAF5 /* pfVSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfVSync.h; sourceTree = "<group>"; };
-		68A26BFF297EC7610067DAF5 /* pfCpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfCpu.h; sourceTree = "<group>"; };
-		68A26C00297EC7610067DAF5 /* pfCpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfCpu.c; sourceTree = "<group>"; };
-		68A26C02297ED3CB0067DAF5 /* pfPfx1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfPfx1.c; sourceTree = "<group>"; };
-		68A26C03297ED3CB0067DAF5 /* pfPfx1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfPfx1.h; sourceTree = "<group>"; };
-		68BBB719297C0E90003AF229 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../vendor/macOS/Debug/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,21 +110,95 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68BBB71B297C0EAF003AF229 /* SDL2.framework in Frameworks */,
+				6858FD31299FBA0000FF68E3 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6800CE6129ACB50B00DEB8D6 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				6800CE6229ACB50B00DEB8D6 /* Coding Standards.md */,
+				6800CE6329ACB50B00DEB8D6 /* Building The Simulator.md */,
+			);
+			name = docs;
+			path = ../docs;
+			sourceTree = "<group>";
+		};
+		6812001629A6A5E600F11877 /* Musashi */ = {
+			isa = PBXGroup;
+			children = (
+				6812002029A6A5E600F11877 /* m68k.h */,
+				6812001729A6A5E600F11877 /* m68kfpu.c */,
+				6812004129A6A5E600F11877 /* m68kcpu.h */,
+				6812002129A6A5E600F11877 /* m68kcpu.c */,
+				6812002229A6A5E600F11877 /* m68kdasm.c */,
+				6812002329A6A5E600F11877 /* Makefile */,
+				6812003E29A6A5E600F11877 /* m68kops.c */,
+				6812003F29A6A5E600F11877 /* m68kmmu.h */,
+				6812004229A6A5E600F11877 /* m68kconf.h */,
+				6812004429A6A5E600F11877 /* m68kops.h */,
+				6812004029A6A5E600F11877 /* m68kmake.c */,
+				6812004529A6A5E600F11877 /* m68k_in.c */,
+				6812001829A6A5E600F11877 /* softfloat */,
+			);
+			name = Musashi;
+			path = ../vendor/src/Musashi;
+			sourceTree = "<group>";
+		};
+		6812001829A6A5E600F11877 /* softfloat */ = {
+			isa = PBXGroup;
+			children = (
+				6812001929A6A5E600F11877 /* mamesf.h */,
+				6812001A29A6A5E600F11877 /* softfloat.c */,
+				6812001B29A6A5E600F11877 /* softfloat-macros */,
+				6812001C29A6A5E600F11877 /* milieu.h */,
+				6812001E29A6A5E600F11877 /* softfloat.h */,
+				6812001F29A6A5E600F11877 /* softfloat-specialize */,
+			);
+			path = softfloat;
+			sourceTree = "<group>";
+		};
+		6812FFF829A6A5BE00F11877 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6812FFF929A6A5BE00F11877 /* pfTypes.h */,
+				6812FFFA29A6A5BE00F11877 /* pfPfx1.h */,
+				6812FFFB29A6A5BE00F11877 /* pfMemory.c */,
+				6812FFFC29A6A5BE00F11877 /* pfSimulator.h */,
+				6812FFFD29A6A5BE00F11877 /* pfVSync.h */,
+				6812FFFE29A6A5BE00F11877 /* pfCpu.h */,
+				6812FFFF29A6A5BE00F11877 /* pfRam.c */,
+				6812000C29A6A5BE00F11877 /* pfMain.h */,
+				6812000029A6A5BE00F11877 /* pfMain.c */,
+				6812000129A6A5BE00F11877 /* pfIO.h */,
+				6812000229A6A5BE00F11877 /* pfRegister.h */,
+				6812000329A6A5BE00F11877 /* pfPfx1.c */,
+				6812000429A6A5BE00F11877 /* pfMemory.h */,
+				6812000529A6A5BE00F11877 /* pfSimulator.c */,
+				6812000629A6A5BE00F11877 /* pfCpu.c */,
+				6812000729A6A5BE00F11877 /* pfVSync.c */,
+				6812000829A6A5BE00F11877 /* pfRegister.c */,
+				6812000929A6A5BE00F11877 /* pfAssert.h */,
+				6812000A29A6A5BE00F11877 /* pfIO.c */,
+				6812000B29A6A5BE00F11877 /* pfRam.h */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
 		68232561297AE36F0059359D = {
 			isa = PBXGroup;
 			children = (
+				6800CE6129ACB50B00DEB8D6 /* docs */,
+				6812001629A6A5E600F11877 /* Musashi */,
+				6812FFF829A6A5BE00F11877 /* src */,
 				6823256C297AE36F0059359D /* pfSimulator */,
 				6823258E297AF1850059359D /* README.md */,
 				68741B90297AF622005838C1 /* CONTRIBUTORS.md */,
 				6823258D297AF1850059359D /* LICENSE */,
-				6823258C297AF1760059359D /* Acknowledgement.md */,
 				6823256B297AE36F0059359D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,53 +214,44 @@
 		6823256C297AE36F0059359D /* pfSimulator */ = {
 			isa = PBXGroup;
 			children = (
-				68741B95297B1424005838C1 /* src */,
+				6858FD2D299F841A00FF68E3 /* Info.plist */,
 				68741B8E297AF416005838C1 /* AppDelegate.swift */,
 				6823257C297AE48E0059359D /* pfSimulator-Bridging-Header.h */,
 				68232571297AE3700059359D /* MainMenu.xib */,
 				6823256F297AE3700059359D /* Assets.xcassets */,
 				68232574297AE3700059359D /* pfSimulator.entitlements */,
-				68232588297AF1480059359D /* Frameworks */,
+				6858FD2E299FB97600FF68E3 /* Frameworks */,
 			);
 			path = pfSimulator;
 			sourceTree = "<group>";
 		};
-		68232588297AF1480059359D /* Frameworks */ = {
+		6858FD2E299FB97600FF68E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				68BBB719297C0E90003AF229 /* SDL2.framework */,
+				6858FD2F299FB98C00FF68E3 /* SDL2.framework */,
 			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		68741B95297B1424005838C1 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				6800EB6A297BF4D20054D164 /* pfMain.h */,
-				68741B96297B1424005838C1 /* pfMain.c */,
-				68A26BF5297E9F3A0067DAF5 /* pfSimulator.c */,
-				68A26BF6297E9F3A0067DAF5 /* pfSimulator.h */,
-				68A26BF8297EA0580067DAF5 /* pfMemory.c */,
-				68A26BF9297EA0580067DAF5 /* pfMemory.h */,
-				68A26BFC297EBE230067DAF5 /* pfVSync.c */,
-				68A26BFD297EBE230067DAF5 /* pfVSync.h */,
-				68A26C00297EC7610067DAF5 /* pfCpu.c */,
-				68A26BFF297EC7610067DAF5 /* pfCpu.h */,
-				683FB3D8297F275600F90430 /* pfMmu.c */,
-				683FB3D7297F275600F90430 /* pfMmu.h */,
-				68A26C02297ED3CB0067DAF5 /* pfPfx1.c */,
-				68A26C03297ED3CB0067DAF5 /* pfPfx1.h */,
-				681B830C297FD2500014709E /* pfPfx1Registers.h */,
-				681B830E297FD2AE0014709E /* pfRegister.c */,
-				681B830D297FD2AE0014709E /* pfRegister.h */,
-				683FB3DA297F2E4400F90430 /* pfAssert.h */,
-				68A26BFB297EA4A30067DAF5 /* pfTypes.h */,
-			);
-			name = src;
-			path = ../../src;
+			name = Frameworks;
+			path = Frameworks/Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		6800CE5B29ACAB2800DEB8D6 /* Musashi */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 6800CE5E29ACAB2800DEB8D6 /* Build configuration list for PBXLegacyTarget "Musashi" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "$(PROJECT_DIR)/../vendor/src/Musashi";
+			dependencies = (
+			);
+			name = Musashi;
+			passBuildSettingsInEnvironment = 1;
+			productName = Musashi;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		68232569297AE36F0059359D /* pfSimulator */ = {
@@ -161,10 +262,12 @@
 				68232567297AE36F0059359D /* Frameworks */,
 				68232568297AE36F0059359D /* Resources */,
 				68232582297AE8180059359D /* Embed Frameworks */,
+				6800CE6429ACB71300DEB8D6 /* Increment build number */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6800CE6029ACAB9500DEB8D6 /* PBXTargetDependency */,
 			);
 			name = pfSimulator;
 			productName = pfSimulator;
@@ -181,6 +284,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					6800CE5B29ACAB2800DEB8D6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					68232569297AE36F0059359D = {
 						CreatedOnToolsVersion = 14.2;
 						LastSwiftMigration = 1420;
@@ -201,6 +307,7 @@
 			projectRoot = "";
 			targets = (
 				68232569297AE36F0059359D /* pfSimulator */,
+				6800CE5B29ACAB2800DEB8D6 /* Musashi */,
 			);
 		};
 /* End PBXProject section */
@@ -217,24 +324,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6800CE6429ACB71300DEB8D6 /* Increment build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Increment build number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "xcrun agvtool next-version -all\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68232566297AE36F0059359D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A26C01297EC7610067DAF5 /* pfCpu.c in Sources */,
-				68A26BFA297EA0580067DAF5 /* pfMemory.c in Sources */,
-				681B830F297FD2AE0014709E /* pfRegister.c in Sources */,
-				68A26BFE297EBE230067DAF5 /* pfVSync.c in Sources */,
-				68A26BF7297E9F3A0067DAF5 /* pfSimulator.c in Sources */,
-				68741B97297B1424005838C1 /* pfMain.c in Sources */,
-				683FB3D9297F275600F90430 /* pfMmu.c in Sources */,
-				68A26C04297ED3CB0067DAF5 /* pfPfx1.c in Sources */,
+				6812004B29A6A5E600F11877 /* m68kcpu.c in Sources */,
+				6812000F29A6A5BE00F11877 /* pfMain.c in Sources */,
+				6812001229A6A5BE00F11877 /* pfCpu.c in Sources */,
+				6812001429A6A5BE00F11877 /* pfRegister.c in Sources */,
+				6812000E29A6A5BE00F11877 /* pfRam.c in Sources */,
+				6812001329A6A5BE00F11877 /* pfVSync.c in Sources */,
+				6812004729A6A5E600F11877 /* softfloat.c in Sources */,
+				6812001529A6A5BE00F11877 /* pfIO.c in Sources */,
+				6812001029A6A5BE00F11877 /* pfPfx1.c in Sources */,
+				6812005D29A6A5E600F11877 /* m68kops.c in Sources */,
+				6812004C29A6A5E600F11877 /* m68kdasm.c in Sources */,
+				6812000D29A6A5BE00F11877 /* pfMemory.c in Sources */,
+				6812001129A6A5BE00F11877 /* pfSimulator.c in Sources */,
 				68741B8F297AF416005838C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6800CE6029ACAB9500DEB8D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6800CE5B29ACAB2800DEB8D6 /* Musashi */;
+			targetProxy = 6800CE5F29ACAB9500DEB8D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		68232571297AE3700059359D /* MainMenu.xib */ = {
@@ -248,10 +389,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		68232575297AE3700059359D /* Debug */ = {
+		6800CE5C29ACAB2800DEB8D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6800CE5D29ACAB2800DEB8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68232575297AE3700059359D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -299,6 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -306,13 +475,14 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
 			};
 			name = Debug;
 		};
 		68232576297AE3700059359D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -354,12 +524,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../src";
 			};
 			name = Release;
 		};
@@ -371,20 +543,26 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = pfSimulator/pfSimulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pfSimulator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = pfSimulator;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "pfSimulator requires this to read the pfxrom file.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2023-present pfSimulator contributors.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = MainMenu.xib;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.projectfreedom.pfSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +570,8 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "pfSimulator/pfSimulator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../pfSDK/include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/src";
 			};
 			name = Debug;
 		};
@@ -403,32 +583,49 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = pfSimulator/pfSimulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = CVZH7C46FN;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = pfSimulator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = pfSimulator;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "pfSimulator requires this to read the pfxrom file.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2023-present pfSimulator contributors.";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = MainMenu.xib;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.projectfreedom.pfSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "pfSimulator/pfSimulator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../pfSDK/include";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/src";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6800CE5E29ACAB2800DEB8D6 /* Build configuration list for PBXLegacyTarget "Musashi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6800CE5C29ACAB2800DEB8D6 /* Debug */,
+				6800CE5D29ACAB2800DEB8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68232565297AE36F0059359D /* Build configuration list for PBXProject "pfSimulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -4,13 +4,18 @@
 
 #include "pfSimulator.h"
 #include "pfCpu.h"
-#include "pfMmu.h"
 #include "pfPfx1.h"
 #include "pfVSync.h"
 #include "pfAssert.h"
 #include "pfMemory.h"
+#include "pfRam.h"
+
+// -- This requires the pfSDK folder to be in the same directory as pfSimulator
+#include <pfSDK/Hardware/Registers.h>
 
 #include <SDL2/SDL.h>
+
+#include <stdio.h>
 
 // -- Constants
 #define PF_SIMULATOR_SCREEN_SIZE_X      800
@@ -28,11 +33,11 @@ typedef struct PFSimulator
     // -- CPU that runs the game code
     PFCpu *cpu;
 
-    // -- Memory management unit
-    PFMmu* mmu;
+    // -- RAM
+    PFRam* ram;
 
     // -- Graphics chip that does the dirty work
-    PFPfx1* gfx;
+    PFPfx1* pfx;
 
 } PFSimulator;
 
@@ -71,7 +76,7 @@ PFSimulatorUpdateStatus pfSimulatorUpdate(void)
     return kNone;
 }
 
-PFSimulator* pfSimulatorNew(void)
+PFSimulator* pfSimulatorNew(const char* rom_file_path)
 {
     PFSimulator* this = pfMemoryCalloc(sizeof(PFSimulator));
     PF_ASSERT(this != NULL);
@@ -85,16 +90,23 @@ PFSimulator* pfSimulatorNew(void)
                                     0);
     PF_ASSERT(this->window != NULL);
     
+    this->ram = pfRamNew();
+    PF_ASSERT(this->ram != NULL);
+    
+    if (pfRamLoadPfxRom(this->ram, rom_file_path) == false) {
+        printf("pfSimulator: Error loading ROM file at '%s'.\n", rom_file_path);
+        printf("pfSimulator: You may need to grant the app permission to access the file.\n");
+        pfSimulatorDelete(this);
+        return NULL;
+    }
+    
     this->renderer = SDL_CreateRenderer(this->window, -1, 0);
     PF_ASSERT(this->renderer != NULL);
     
-    this->mmu = pfMmuNew();
-    PF_ASSERT(this->mmu != NULL);
+    this->pfx = pfPfx1New(this);
+    PF_ASSERT(this->pfx != NULL);
 
-    this->gfx = pfPfx1New(this, this->mmu);
-    PF_ASSERT(this->gfx != NULL);
-
-    this->cpu = pfCpuNew(this->mmu);
+    this->cpu = pfCpuNew(this->ram, this->pfx);
     PF_ASSERT(this->cpu != NULL);
     
     return this;
@@ -117,14 +129,14 @@ void pfSimulatorDelete(PFSimulator* this)
         this->cpu = NULL;
     }
     
-    if (this->gfx != NULL) {
-        pfPfx1Delete(this->gfx);
-        this->gfx = NULL;
+    if (this->pfx != NULL) {
+        pfPfx1Delete(this->pfx);
+        this->pfx = NULL;
     }
     
-    if (this->mmu != NULL) {
-        pfMmuDelete(this->mmu);
-        this->mmu = NULL;
+    if (this->ram != NULL) {
+        pfRamDelete(this->ram);
+        this->ram = NULL;
     }
     
     pfMemoryFree(this);

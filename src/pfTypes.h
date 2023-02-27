@@ -11,8 +11,10 @@
 // -- Memory size type
 typedef size_t size;
 
-// -- Byte size type
+// -- Various data types
 typedef uint8_t byte;
+typedef uint16_t word;
+typedef uint32_t longword;
 
 // -- Various integer types
 typedef uint16_t uint16;

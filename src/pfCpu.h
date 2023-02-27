@@ -5,13 +5,14 @@
 #ifndef PF_CPU_H
 #define PF_CPU_H
 
-#include "pfMmu.h"
+#include "pfRam.h"
+#include "pfPfx1.h"
 
 // -- Forward Declarations
 typedef struct PFCpu PFCpu;
 
 // -- Create a new CPU
-PFCpu* pfCpuNew(PFMmu* mmu);
+PFCpu* pfCpuNew(PFRam* ram, PFPfx1* pfx);
 
 // -- Destroy an existing CPU
 void pfCpuDelete(PFCpu* this);
