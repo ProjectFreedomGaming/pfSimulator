@@ -22,7 +22,7 @@ static int _threadFunction(void* data)
 
         ++_vsync_count;
     }
-    
+
     return 0;
 }
 
