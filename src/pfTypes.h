@@ -6,6 +6,7 @@
 #define PF_TYPES_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 // -- Memory size type
 typedef size_t size;
@@ -19,11 +20,5 @@ typedef uint32_t uint32;
 
 // -- Pointer type
 typedef uint32_t pointer;
-
-// -- Boolean type
-typedef int bool;
-
-#define TRUE     1
-#define FALSE    0
 
 #endif

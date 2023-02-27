@@ -42,7 +42,7 @@ uint16 _read(void* argument, pointer address)
         }
         default:
             // -- Illegal read address
-            PF_ASSERT(FALSE);
+            PF_ASSERT(false);
     }
     
     return 0;
@@ -83,7 +83,7 @@ void _write(void* argument, pointer address, uint16 value)
         }
         default:
             // -- Illegal read address
-            PF_ASSERT(FALSE);
+            PF_ASSERT(false);
     }
 }
 

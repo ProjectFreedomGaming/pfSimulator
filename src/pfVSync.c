@@ -11,7 +11,7 @@
 // -- Static variables
 static SDL_Thread* _thread = NULL;
 static size _vsync_count = 0;
-static bool _thread_should_exit = FALSE;
+static bool _thread_should_exit = false;
 
 // -- Functions
 static int _threadFunction(void* data)
@@ -39,7 +39,7 @@ void pfVsyncInit(void)
 void pfVsyncShutdown(void)
 {
     if (_thread != NULL) {
-        _thread_should_exit = TRUE;
+        _thread_should_exit = true;
 
         SDL_WaitThread(_thread, NULL);
 

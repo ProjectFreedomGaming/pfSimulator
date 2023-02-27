@@ -42,13 +42,13 @@ bool pfSimulatorInit(void)
     // -- Init the SDL subsystem
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         printf("error initializing SDL: %s\n", SDL_GetError());
-        return FALSE;
+        return false;
     }
     
     // -- Init our VSync simulator
     pfVsyncInit();
     
-    return TRUE;
+    return true;
 }
 
 void pfSimulatorShutdown(void)

@@ -70,7 +70,7 @@ PFCpu* pfCpuNew(PFMmu* mmu)
 void pfCpuDelete(PFCpu* this)
 {
     if (this->thread != NULL) {
-        this->thread_should_exit = TRUE;
+        this->thread_should_exit = true;
         
         SDL_WaitThread(this->thread, NULL);
 
