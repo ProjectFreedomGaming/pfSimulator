@@ -10,7 +10,7 @@
 		6812000D29A6A5BE00F11877 /* pfMemory.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812FFFB29A6A5BE00F11877 /* pfMemory.c */; };
 		6812000E29A6A5BE00F11877 /* pfRam.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812FFFF29A6A5BE00F11877 /* pfRam.c */; };
 		6812000F29A6A5BE00F11877 /* pfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000029A6A5BE00F11877 /* pfMain.c */; };
-		6812001029A6A5BE00F11877 /* pfPfx1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000329A6A5BE00F11877 /* pfPfx1.c */; };
+		6812001029A6A5BE00F11877 /* pfFlip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000329A6A5BE00F11877 /* pfFlip.c */; };
 		6812001129A6A5BE00F11877 /* pfSimulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000529A6A5BE00F11877 /* pfSimulator.c */; };
 		6812001229A6A5BE00F11877 /* pfCpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000629A6A5BE00F11877 /* pfCpu.c */; };
 		6812001329A6A5BE00F11877 /* pfVSync.c in Sources */ = {isa = PBXBuildFile; fileRef = 6812000729A6A5BE00F11877 /* pfVSync.c */; };
@@ -57,7 +57,7 @@
 		6812000029A6A5BE00F11877 /* pfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMain.c; sourceTree = "<group>"; };
 		6812000129A6A5BE00F11877 /* pfIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfIO.h; sourceTree = "<group>"; };
 		6812000229A6A5BE00F11877 /* pfRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfRegister.h; sourceTree = "<group>"; };
-		6812000329A6A5BE00F11877 /* pfPfx1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfPfx1.c; sourceTree = "<group>"; };
+		6812000329A6A5BE00F11877 /* pfFlip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfFlip.c; sourceTree = "<group>"; };
 		6812000429A6A5BE00F11877 /* pfMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfMemory.h; sourceTree = "<group>"; };
 		6812000529A6A5BE00F11877 /* pfSimulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfSimulator.c; sourceTree = "<group>"; };
 		6812000629A6A5BE00F11877 /* pfCpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfCpu.c; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		6812004429A6A5E600F11877 /* m68kops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m68kops.h; sourceTree = "<group>"; };
 		6812004529A6A5E600F11877 /* m68k_in.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = m68k_in.c; sourceTree = "<group>"; };
 		6812FFF929A6A5BE00F11877 /* pfTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfTypes.h; sourceTree = "<group>"; };
-		6812FFFA29A6A5BE00F11877 /* pfPfx1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfPfx1.h; sourceTree = "<group>"; };
+		6812FFFA29A6A5BE00F11877 /* pfFlip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfFlip.h; sourceTree = "<group>"; };
 		6812FFFB29A6A5BE00F11877 /* pfMemory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pfMemory.c; sourceTree = "<group>"; };
 		6812FFFC29A6A5BE00F11877 /* pfSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfSimulator.h; sourceTree = "<group>"; };
 		6812FFFD29A6A5BE00F11877 /* pfVSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pfVSync.h; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				6812FFF929A6A5BE00F11877 /* pfTypes.h */,
-				6812FFFA29A6A5BE00F11877 /* pfPfx1.h */,
+				6812FFFA29A6A5BE00F11877 /* pfFlip.h */,
 				6812FFFB29A6A5BE00F11877 /* pfMemory.c */,
 				6812FFFC29A6A5BE00F11877 /* pfSimulator.h */,
 				6812FFFD29A6A5BE00F11877 /* pfVSync.h */,
@@ -175,7 +175,7 @@
 				6812000029A6A5BE00F11877 /* pfMain.c */,
 				6812000129A6A5BE00F11877 /* pfIO.h */,
 				6812000229A6A5BE00F11877 /* pfRegister.h */,
-				6812000329A6A5BE00F11877 /* pfPfx1.c */,
+				6812000329A6A5BE00F11877 /* pfFlip.c */,
 				6812000429A6A5BE00F11877 /* pfMemory.h */,
 				6812000529A6A5BE00F11877 /* pfSimulator.c */,
 				6812000629A6A5BE00F11877 /* pfCpu.c */,
@@ -358,7 +358,7 @@
 				6812001329A6A5BE00F11877 /* pfVSync.c in Sources */,
 				6812004729A6A5E600F11877 /* softfloat.c in Sources */,
 				6812001529A6A5BE00F11877 /* pfIO.c in Sources */,
-				6812001029A6A5BE00F11877 /* pfPfx1.c in Sources */,
+				6812001029A6A5BE00F11877 /* pfFlip.c in Sources */,
 				6812005D29A6A5E600F11877 /* m68kops.c in Sources */,
 				6812004C29A6A5E600F11877 /* m68kdasm.c in Sources */,
 				6812000D29A6A5BE00F11877 /* pfMemory.c in Sources */,

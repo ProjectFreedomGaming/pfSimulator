@@ -7,7 +7,7 @@
 #include "pfTypes.h"
 #include "pfAssert.h"
 #include "pfRam.h"
-#include "pfPfx1.h"
+#include "pfFlip.h"
 #include "pfIO.h"
 
 // -- This requires the pfSDK folder to be in the same directory as pfSimulator
@@ -26,7 +26,7 @@ typedef struct PFCpu
     bool thread_should_exit;
     
     PFRam* ram;
-    PFPfx1* pfx;
+    PFFlip* flip;
 } PFCpu;
 
 // -- Single instance of our CPU
@@ -57,8 +57,8 @@ unsigned int m68k_read_memory_16(unsigned int address)
     _MEMORY_ACCESS_LOG("Read16 at 0x%08x ", address);
     PF_ASSERT(_singleton != NULL);
 
-    if (address >= (PF_CUSTOM_CHIPS_BASE + PF_PFX1_BASE)) {
-        return pfPfx1ReadWord(_singleton->pfx, address);
+    if (address >= (PF_CUSTOM_CHIPS_BASE + PF_FLIP_BASE)) {
+        return pfFlipReadWord(_singleton->flip, address);
     }
     else if (address >= (PF_CUSTOM_CHIPS_BASE + PF_IO_BASE)) {
         return pfIOReadWord(address);
@@ -95,8 +95,8 @@ void m68k_write_memory_16(unsigned int address, unsigned int value)
     _MEMORY_ACCESS_LOG("Write16 at 0x%08x (%d) ", address, value);
     PF_ASSERT(_singleton != NULL);
 
-    if (address >= (PF_CUSTOM_CHIPS_BASE + PF_PFX1_BASE)) {
-        pfPfx1WriteWord(_singleton->pfx, address, value);
+    if (address >= (PF_CUSTOM_CHIPS_BASE + PF_FLIP_BASE)) {
+        pfFlipWriteWord(_singleton->flip, address, value);
     }
     else if (address >= (PF_CUSTOM_CHIPS_BASE + PF_IO_BASE)) {
         pfIOWriteWord(address, value);
@@ -158,11 +158,11 @@ static int _threadFunction(void* data)
     return 0;
 }
 
-PFCpu* pfCpuNew(PFRam* ram, PFPfx1* pfx)
+PFCpu* pfCpuNew(PFRam* ram, PFFlip* flip)
 {
     PF_ASSERT_DEBUG(_singleton == NULL);
     PF_ASSERT_DEBUG(ram != NULL);
-    PF_ASSERT_DEBUG(pfx != NULL);
+    PF_ASSERT_DEBUG(flip != NULL);
 
     PFCpu* this = pfMemoryCalloc(sizeof(PFCpu));
     PF_ASSERT(this != NULL);
@@ -170,7 +170,7 @@ PFCpu* pfCpuNew(PFRam* ram, PFPfx1* pfx)
     _singleton = this;
     
     this->ram = ram;
-    this->pfx = pfx;
+    this->flip = flip;
 
     m68k_init();
     m68k_set_cpu_type(M68K_CPU_TYPE_68000);
@@ -193,7 +193,7 @@ void pfCpuDelete(PFCpu* this)
     }
 
     this->ram = NULL;
-    this->pfx = NULL;
+    this->flip = NULL;
 
     pfMemoryFree(this);
 }

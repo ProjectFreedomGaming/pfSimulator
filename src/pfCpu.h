@@ -6,13 +6,13 @@
 #define PF_CPU_H
 
 #include "pfRam.h"
-#include "pfPfx1.h"
+#include "pfFlip.h"
 
 // -- Forward Declarations
 typedef struct PFCpu PFCpu;
 
 // -- Create a new CPU
-PFCpu* pfCpuNew(PFRam* ram, PFPfx1* pfx);
+PFCpu* pfCpuNew(PFRam* ram, PFFlip* flip);
 
 // -- Destroy an existing CPU
 void pfCpuDelete(PFCpu* this);

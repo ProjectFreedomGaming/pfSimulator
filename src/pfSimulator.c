@@ -4,7 +4,7 @@
 
 #include "pfSimulator.h"
 #include "pfCpu.h"
-#include "pfPfx1.h"
+#include "pfFlip.h"
 #include "pfVSync.h"
 #include "pfAssert.h"
 #include "pfMemory.h"
@@ -37,7 +37,7 @@ typedef struct PFSimulator
     PFRam* ram;
 
     // -- Graphics chip that does the dirty work
-    PFPfx1* pfx;
+    PFFlip* flip;
 
 } PFSimulator;
 
@@ -103,10 +103,10 @@ PFSimulator* pfSimulatorNew(const char* rom_file_path)
     this->renderer = SDL_CreateRenderer(this->window, -1, 0);
     PF_ASSERT(this->renderer != NULL);
     
-    this->pfx = pfPfx1New(this);
-    PF_ASSERT(this->pfx != NULL);
+    this->flip = pfFlipNew(this);
+    PF_ASSERT(this->flip != NULL);
 
-    this->cpu = pfCpuNew(this->ram, this->pfx);
+    this->cpu = pfCpuNew(this->ram, this->flip);
     PF_ASSERT(this->cpu != NULL);
     
     return this;
@@ -129,9 +129,9 @@ void pfSimulatorDelete(PFSimulator* this)
         this->cpu = NULL;
     }
     
-    if (this->pfx != NULL) {
-        pfPfx1Delete(this->pfx);
-        this->pfx = NULL;
+    if (this->flip != NULL) {
+        pfFlipDelete(this->flip);
+        this->flip = NULL;
     }
     
     if (this->ram != NULL) {

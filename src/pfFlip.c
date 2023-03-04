@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "pfPfx1.h"
+#include "pfFlip.h"
 #include "pfSimulator.h"
 #include "pfRegister.h"
 #include "pfMemory.h"
@@ -12,7 +12,7 @@
 #include <pfSDK/Hardware/Registers.h>
 
 // -- Types
-typedef struct PFPfx1
+typedef struct PFFlip
 {
     PFSimulator* simulator;
 
@@ -20,14 +20,14 @@ typedef struct PFPfx1
     PFRegister* control;
     PFRegister* color_rg;
     PFRegister* color_ba;
-} PFPfx1;
+} PFFlip;
 
 // -- Functions
-PFPfx1* pfPfx1New(PFSimulator* simulator)
+PFFlip* pfFlipNew(PFSimulator* simulator)
 {
     PF_ASSERT_DEBUG(simulator != NULL);
     
-    PFPfx1* this = pfMemoryCalloc(sizeof(PFPfx1));
+    PFFlip* this = pfMemoryCalloc(sizeof(PFFlip));
     PF_ASSERT(this != NULL);
     
     this->simulator = simulator;
@@ -40,7 +40,7 @@ PFPfx1* pfPfx1New(PFSimulator* simulator)
     return this;
 }
 
-void pfPfx1Delete(PFPfx1* this)
+void pfFlipDelete(PFFlip* this)
 {
     pfRegisterDelete(this->vsync_count);
     this->vsync_count = NULL;
@@ -59,19 +59,19 @@ void pfPfx1Delete(PFPfx1* this)
     pfMemoryFree(this);
 }
 
-word pfPfx1ReadWord(PFPfx1* this, pointer address)
+word pfFlipReadWord(PFFlip* this, pointer address)
 {
     PF_ASSERT_DEBUG(this != NULL);
     
     switch (address - PF_CUSTOM_CHIPS_BASE) {
-        case PF_PFX1_VSYNC_COUNT: {
+        case PF_FLIP_VSYNC_COUNT: {
             // -- We downcast to word here but for the sake of comparing frame numbers, that's ok
             return (word)pfSimulatorGetVSyncCount();
         }
-        case PF_PFX1_COLOR_RG: {
+        case PF_FLIP_COLOR_RG: {
             return pfRegisterRead(this->color_rg);
         }
-        case PF_PFX1_COLOR_BA: {
+        case PF_FLIP_COLOR_BA: {
             return pfRegisterRead(this->color_ba);
         }
         default:
@@ -82,34 +82,34 @@ word pfPfx1ReadWord(PFPfx1* this, pointer address)
     return 0;
 }
 
-void pfPfx1WriteWord(PFPfx1* this, pointer address, word value)
+void pfFlipWriteWord(PFFlip* this, pointer address, word value)
 {
     PF_ASSERT_DEBUG(this != NULL);
     
     switch (address - PF_CUSTOM_CHIPS_BASE) {
-        case PF_PFX1_CONTROL: {
+        case PF_FLIP_CONTROL: {
             uint16 result = pfRegisterWrite(this->control, value);
             
-            if (result & PF_PFX1_CONTROL_CLEAR_SCREEN) {
-                pfRegisterClearBits(this->control, PF_PFX1_CONTROL_CLEAR_SCREEN);
+            if (result & PF_FLIP_CONTROL_CLEAR_SCREEN) {
+                pfRegisterClearBits(this->control, PF_FLIP_CONTROL_CLEAR_SCREEN);
                 
                 uint16 rg = pfRegisterRead(this->color_rg);
                 uint16 ba = pfRegisterRead(this->color_ba);
                 pfSimulatorClearDisplay(this->simulator, rg >> 8, rg & 0xFF, ba >> 8);
             }
             
-            if (result & PF_PFX1_CONTROL_SWAP_BUFFER) {
-                pfRegisterClearBits(this->control, PF_PFX1_CONTROL_SWAP_BUFFER);
+            if (result & PF_FLIP_CONTROL_SWAP_BUFFER) {
+                pfRegisterClearBits(this->control, PF_FLIP_CONTROL_SWAP_BUFFER);
                 
                 pfSimulatorSwapDisplayBuffer(this->simulator);
             }
             break;
         }
-        case PF_PFX1_COLOR_RG: {
+        case PF_FLIP_COLOR_RG: {
             pfRegisterWrite(this->color_rg, value);
             break;
         }
-        case PF_PFX1_COLOR_BA: {
+        case PF_FLIP_COLOR_BA: {
             pfRegisterWrite(this->color_ba, value);
             break;
         }
